@@ -49,6 +49,7 @@ $ python setup.py build develop
 $ git clone https://github.com/jackd/ifp-sample.git
 $ pip install -e ifp-sample
 ```
+
 Please follow Det3D for installation of other [related packages](https://github.com/poodarchu/Det3D/blob/master/INSTALLATION.md) and [data preparation](https://github.com/poodarchu/Det3D/blob/master/GETTING_STARTED.md).
 
 ## Train and Eval
@@ -98,3 +99,25 @@ Thanks for the reviewers's valuable comments on this paper.
 
 ## Contact
 If you have any question or suggestion about this repo, please feel free to contact me (zheng-w10@foxmail.com)
+
+------
+
+### 遇到的问题
+
+#### 安装spconv 的时候 python setup.py bdist_wheel 出问题
+
+1. ###### 问题1：returned non-zero exit status 2.
+
+* 解决：在当前环境下或者Ubuntu全局环境下，安装cudnn
+
+2. ###### 问题2：returned non-zero exit status 2.
+
+* 解决：使用spconv1.0
+
+* 参考：
+
+[failed to install spconv (environment: ubuntu 20.04 cmake 3.13.2 pytorch 1.3.1)](https://github.com/traveller59/spconv/issues/212)
+
+[跑通PCDet上的那些坑——复现second PV-RCNN pointpillar](https://blog.csdn.net/hughlee815/article/details/107226257?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522159645711419195188342704%2522%252C%2522scm%2522%253A%252220140713.130102334..%2522%257D&request_id=159645711419195188342704&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_v2~rank_v28-1-107226257.pc_first_rank_v2_rank_v28&utm_term=%E8%B7%91%E9%80%9APCDet&spm=1018.2118.3001.4187)
+
+[spconv1.0 github](https://github.com/tyjiang1997/spconv1.0)
